@@ -1,0 +1,25 @@
+{
+  "name": "vmotostore",
+  "version": "1.0.0",
+  "description": "Store ",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js localhost 3000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mafrawise40/vmotostore.git"
+  },
+  "author": "Rodrigo Mafra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mafrawise40/vmotostore/issues"
+  },
+  "homepage": "https://github.com/mafrawise40/vmotostore#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.5.2",
+    "nodemon": "^3.0.1"
+  }
+}
