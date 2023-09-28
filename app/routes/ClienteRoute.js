@@ -30,10 +30,10 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
 
 
-    var id = req.params.id;
+    let id = req.params.id;
 
     try {
-        let result = await Cliente.findById(id);
+        let result =  Cliente.findById(id);
         res.status(201).json(result)
     } catch (error) {
         res.status(500).json({ erro: error })
@@ -44,10 +44,10 @@ router.get('/:id', async (req, res) => {
 router.delete('/:id', async (req, res) => {
 
 
-    var id = req.params.id;
+    let id = req.params.id;
 
     try {
-        let result = await Cliente.findOneAndRemove({ _id: id });
+        let result =  Cliente.findOneAndRemove({ _id: id });
         res.status(201).json(result)
     } catch (error) {
         res.status(500).json({ erro: error })
@@ -56,12 +56,12 @@ router.delete('/:id', async (req, res) => {
 
 
 router.put('/:id', async (req, res) => {
-    var id = req.params.id;
+    let id = req.params.id;
 
     req.body.alteradoEm = new Date();
 
     try {
-        let result = await Cliente.findByIdAndUpdate({ _id: id }, req.body, {
+        let result = Cliente.findByIdAndUpdate({ _id: id }, req.body, {
             new: true
         });
         res.status(201).json(result)

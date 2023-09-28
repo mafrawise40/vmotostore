@@ -9,10 +9,13 @@ const Venda = mongoose.model('Venda', {
         }
     ],
     status: String, //aberto ou finalizada,
-    valorTotal: Number,
-    descontoNoValorTotal: Number,
+    valorTotal: Number, // centavos
+    descontoNoValorTotal: Number, // em centavos
+    modeloMoto: String,
     criadoEm: Date,
-    alteradoEm: Date
+    alteradoEm: Date,
+    formaPagamento: String,
+    observacao: String
 });
 
 
